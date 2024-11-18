@@ -1,0 +1,176 @@
+/* Base Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #B85042;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #F1E0C6;
+}
+
+/* Wrapper bleed effect */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 35%;
+  margin: auto;
+  padding: 10px;
+}
+
+/* Desc and thanks box styling */
+.desc-box, .thanks-box {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+  flex-grow: 1;
+  min-width: 100%;
+}
+
+.thanks-box{
+  display: none;
+}
+
+/* Form styling */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form-box {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.short-input{
+  width: 50%;
+  border: none;
+  border-bottom: 2px solid #B85042;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.shortest-input{
+  width: 20%;
+  border: none;
+  border-bottom: 2px solid #B85042;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #202124;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #B85042;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.radio-group, .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding-top: 15px;
+}
+
+.radio-check-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+/* Remove margin so buttons line up with text */
+input[type="radio"], input[type="checkbox"] {
+  margin: 0;
+  margin-right: 10px;
+}
+
+/* Button styling (clear and submit) */
+button {
+  background-color: #7E9C8B;
+  color: #F4F4F4;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #C7A25D;
+}
+
+.submit-clear{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#submit-btn{
+  margin-left: -21px;
+
+}
+#clear-btn{
+  margin-right: -21px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width:1400px){
+  .wrapper{
+    max-width: 50%;
+  }
+}
+
+@media (max-width:980px){
+  .wrapper{
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 600px) {
+    .wrapper{
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+
+    .desc-box{
+      margin-bottom: 50px;
+    }
+
+    .form-box {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Evaluation Form</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <h1>Assignment 5 - WEB222</h1>
+    <div class="wrapper">
+      <div class="desc-box">
+        <h2>Comprehensive Course Evaluation Form</h2>
+        <p>
+          Create a Course Evaluation Form for a fictitious company Seneca Polytechnic, using HTML5
+          and CSS3. The form should be responsive and employ various HTML input types, HTML input
+          attributes, HTML form elements, and form validation attributes. The form should cover all
+          necessary input fields, styling, and responsive layout techniques.
+        </p>
+      </div>
+
+
+      <form action="#" method="post">
+        <!-- Name -->
+        <div class="form-box">
+          <label for="first-name">First Name:</label>
+          <input
+            type="text"
+            id="first-name"
+            class="short-input"
+            name="first-name"
+            placeholder="John"
+            required
+            maxlength="50"
+          />
+        </div>
+
+        <div class="form-box">
+          <label for="last-name">Last Name:</label>
+          <input
+            type="text"
+            id="last-name"
+            class="short-input"
+            name="last-name"
+            placeholder="Doe"
+            required
+            maxlength="50"
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="form-box">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            class="short-input"
+            name="email"
+            placeholder="example@example.com"
+            required
+          />
+        </div>
+
+        <!-- Gender -->
+        <div class="form-box">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <div class="radio-check-box">
+              <input type="radio" id="male" name="gender" value="Male" required />
+              <label for="male">Male</label>
+            </div>
+
+            <div class="radio-check-box">
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="female">Female</label>
+            </div>
+
+            <div class="radio-check-box">
+              <input type="radio" id="other" name="gender" value="Other" />
+              <label for="other">Other</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Rating -->
+        <div class="form-box">
+          <label for="rating">Course Rating (1-5):</label>
+          <select id="rating" class="short-input" name="rating" required>
+            <option value="">Select</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 - Excellent</option>
+          </select>
+        </div>
+
+        <!-- Preferred Learning Style -->
+        <div class="form-box">
+          <label>Preferred Learning Style:</label>
+
+          <!-- Error message box -->
+          <div id="learning-style-error" style="display: none; color: red; margin-top: 10px">
+            Please select at least one learning style.
+          </div>
+
+          <div class="checkbox-group">
+            <div class="radio-check-box">
+              <input type="checkbox" id="visual" name="learning-style" value="Visual" />
+              <label for="visual">Visual</label>
+            </div>
+
+            <div class="radio-check-box">
+              <input type="checkbox" id="auditory" name="learning-style" value="Auditory" />
+              <label for="auditory">Auditory</label>
+            </div>
+
+            <div class="radio-check-box">
+              <input type="checkbox" id="hands-on" name="learning-style" value="Hands-on" />
+              <label for="hands-on">Hands-on</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Age -->
+        <div class="form-box">
+          <label for="age">Age (18-100):</label>
+          <input
+            type="number"
+            id="age"
+            class="shortest-input"
+            name="age"
+            min="18"
+            max="100"
+            required
+          />
+        </div>
+
+        <!-- Course Feedback -->
+        <div class="form-box">
+          <label for="feedback">Course Feedback:</label>
+          <textarea
+            id="feedback"
+            name="feedback"
+            rows="4"
+            placeholder="Let us know how we can improve!"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-clear">
+          <button id="submit-btn" type="submit">Submit</button>
+          <button id="clear-btn" type="reset">Clear Form</button>
+        </div>
+      </form>
+      <!-- Thank You Message (initially hidden) -->
+      <div id="thank-you-message" class="thanks-box">
+        <h2>Thank You for your feedback!</h2>
+        <p>Your responses have been submitted successfully.</p>
+      </div>
+    </div>
+
+
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
